@@ -1,16 +1,23 @@
 {
   "name": "ovp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev"
+    "cd1":"wrangler d1 create ovp",
+    "ed1":"wrangler d1 execute ovp --file=./schema.sql",
+    "ed1:local":"wrangler d1 execute ovp --local --file=./schema.sql",
+    "ckv":"wrangler kv:namespace create zealy",
+    "ckv:preview":"wrangler kv:namespace create zealy --preview"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240117.0",
     "itty-router": "^3.0.12",
     "typescript": "^5.0.4",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "discord-interactions": "^3.4.0"
   }
 }
